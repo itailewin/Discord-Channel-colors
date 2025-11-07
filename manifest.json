@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Discord Channel Highlighter",
+    "version": "1.0",
+    "description": "Applies custom background colors to specific Discord channels in the sidebar.",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon16.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "https://discord.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://discord.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}

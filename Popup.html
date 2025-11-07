@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Channel Highlighter Settings</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; width: 300px; padding: 10px; background-color: #f1f5f9; }
+        h4 { margin-top: 0; color: #1e3a8a; }
+        .input-group { display: flex; gap: 8px; margin-bottom: 10px; align-items: center; }
+        
+        /* Style for the new select/dropdown */
+        .input-group select, .input-group input[type="text"] { 
+            flex-grow: 1; 
+            padding: 6px; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 4px;
+            background-color: white; /* Ensure visibility */
+        }
+
+        .input-group input[type="color"] { width: 30px; height: 30px; border: none; padding: 0; border-radius: 4px; cursor: pointer; }
+        .btn-add { background-color: #3b82f6; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; transition: background-color 0.2s; }
+        .btn-add:hover { background-color: #2563eb; }
+        .settings-list { margin-top: 15px; border-top: 1px solid #e2e8f0; padding-top: 10px; }
+        .setting-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px dashed #e2e8f0; font-size: 14px; }
+        .setting-item:last-child { border-bottom: none; }
+        .setting-name { font-weight: 500; color: #0f172a; max-width: 70%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .color-preview { width: 15px; height: 15px; border-radius: 3px; border: 1px solid #ccc; display: inline-block; margin-right: 8px; }
+        .btn-remove { background: none; border: none; color: #ef4444; cursor: pointer; font-size: 18px; line-height: 1; }
+        .btn-remove:hover { color: #dc2626; }
+        #save-status { margin-top: 10px; font-size: 12px; color: #10b981; }
+        .toggle-switch { font-size: 12px; margin-top: 5px; text-align: right; color: #475569; }
+        .toggle-switch span { cursor: pointer; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h4>Channel Highlighters</h4>
+
+    <div class="input-group">
+        <!-- The dropdown is now the only way to select a channel -->
+        <select id="channelSelector"></select>
+        
+        <input type="color" id="channelColor" value="#818cf8">
+        <button id="addChannel" class="btn-add">Add</button>
+    </div>
+
+    <div class="settings-list" id="settingsList">
+        <!-- Settings will be listed here by popup.js -->
+    </div>
+    
+    <div id="save-status"></div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
