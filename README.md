@@ -4,7 +4,7 @@
 
 A simple but powerful Chrome extension that allows you to apply custom background colors to specific Discord channels, making your important channels stand out in a crowded sidebar.
 
-![Discord Channel Highlighter](screenshot.png) <!-- TODO: Replace with a real screenshot URL -->
+![Discord Channel Highlighter](Screenshot.png)
 ## Features
 
 -   🎨 **Custom Highlighting:** Assign a unique, solid background color to any channel.
