@@ -52,6 +52,6 @@ The extension icon will now appear in your Chrome toolbar, and it will be active
 
 Contributions are welcome! If you have ideas for new features or find a bug, feel free to open an issue or submit a pull request.
 
-## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+![](Screenshot.png)
